@@ -72,17 +72,22 @@ while(num):
 
     if (lv == 1):
         while x < 15:
-            if(not exists(Template(r"tpl1680426884563.png", record_pos=(0.014, 0.189), resolution=(1080, 1920))) and not exists(Template(r"tpl1663507746975.png", record_pos=(0.003, 0.194), resolution=(720, 1280)))):
+            if(not exists(Template(r"tpl1688526297122.png", record_pos=(0.03, -0.064), resolution=(1080, 1920))) and not exists(Template(r"tpl1663507746975.png", record_pos=(0.003, 0.194), resolution=(720, 1280)))):
                 x = x+1
-            elif(exists(Template(r"tpl1680426884563.png", record_pos=(0.014, 0.189), resolution=(1080, 1920))) and not exists(Template(r"tpl1663507746975.png", record_pos=(0.003, 0.194), resolution=(720, 1280)))):
+            elif(exists(Template(r"tpl1688526297122.png", record_pos=(0.03, -0.064), resolution=(1080, 1920))) and not exists(Template(r"tpl1663507746975.png", record_pos=(0.003, 0.194), resolution=(720, 1280)))):
 
-                touch(Template(r"tpl1680426884563.png", record_pos=(0.014, 0.189), resolution=(1080, 1920)))
+                touch(Template(r"tpl1688526297122.png", record_pos=(0.03, -0.064), resolution=(1080, 1920)))
+#                 touch(Template(r"tpl1688526345249.png", record_pos=(0.048, -0.065), resolution=(1080, 1920)))
+
+                
+                
                 print("选择难度"+'\n')
                 print("超难"+'\n')
                 sleep(1.0)
                 x = 30
             else:
                 x = 30
+
     elif(lv == 2):
         while x < 15:
             if(not exists(Template(r"tpl1663747815678.png", record_pos=(0.034, -0.071), resolution=(900, 1600))) and not exists(Template(r"tpl1663507746975.png", record_pos=(0.003, 0.194), resolution=(720, 1280)))):
