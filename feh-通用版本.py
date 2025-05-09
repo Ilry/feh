@@ -99,6 +99,15 @@ BATTLE_TEMPLATES = {
         resolution=(900, 1600)
     )
 }
+CURRENT_TEMPLATE = {
+        "星期一":"解放王",
+        "星期二": "赤色剑士",
+        "星期三": "军师",
+        "星期四": "暗黑狙击手",
+        "星期五": "白狼",
+        "星期六": "炎之祭司",
+        "星期日":"暗夜骑士",
+    }
 def initialize_setup():
     """初始化设备连接"""
     if not cli_setup():
@@ -148,15 +157,7 @@ def perform_battle_operations(period_name):
     """执行战斗操作（业务函数）"""
     # 难度选择分支
     tag , pos , times = [True] * 5, [None] * 10, [0] * 5
-    current_template = {
-        "星期一":"解放王",
-        "星期二": "赤色剑士",
-        "星期三": "军师",
-        "星期四": "暗黑狙击手",
-        "星期五": "白狼",
-        "星期六": "炎之祭司",
-        "星期日":"暗夜骑士",
-    }[period_name]
+    current_template = CURRENT_TEMPLATE[period_name]
     while tag[0]:   #选择难度环节
         if times[0] % 6 == 0:
             pos[1] = exists(BATTLE_TEMPLATES["结束战斗"])
@@ -340,6 +341,7 @@ def main():
         base_date = get_time_period()
         period_name = get_weekday_name(base_date)
         print(f"当前周期：{base_date.strftime('%Y-%m-%d')} {period_name}\n")
+        print(f"选择人物：{CURRENT_TEMPLATE[period_name]}\n")
         total_time = 0
         for count in range(1, num + 1):
             compare_period(period_name)
