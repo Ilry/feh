@@ -153,6 +153,7 @@ def get_weekday_name(base_date):
     """
     weekdays = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
     return weekdays[base_date.weekday()]
+
 def perform_battle_operations(period_name):
     """执行战斗操作（业务函数）"""
     # 难度选择分支
@@ -285,7 +286,6 @@ def print_progress_bar(current, total, elapsed_time, total_time,base_value, bar_
         f"预计完成时间：{CUSTOM_PANADA}{calculate_time(remaining_time)}{Style.RESET_ALL}\n"
     )
 
-
 def calculate_time(seconds: int, format_str: str = "%Y-%m-%d %H:%M:%S") -> str:
     """
     根据当前时间和给定的秒数计算新时间，并格式化输出
@@ -314,7 +314,6 @@ def get_current_time(format_str: str = "%Y-%m-%d %H:%M:%S") -> str:
     """
     return datetime.now().strftime(format_str)
         
-
 def format_time(seconds: int) -> str:
     """时间格式化（保持原始计算逻辑）"""
     seconds = int(seconds)
